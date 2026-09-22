@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇航科技手機旗艦商城</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #1a252f;
+            color: #fff;
+            text-align: center;
+            padding: 30px 10px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        header p {
+            margin: 10px 0 0 0;
+            color: #bdc3c7;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .brand-section {
+            margin-bottom: 50px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .brand-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            border-left: 5px solid #3498db;
+            padding-left: 15px;
+            margin-bottom: 25px;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+        .product-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            overflow: hidden;
+            background: #fff;
+            transition: transform 0.2s, box-shadow 0.2s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        .badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            padding: 5px 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+            border-radius: 4px;
+            color: #fff;
+        }
+        .badge-level { background-color: #7f8c8d; }
+        .badge-sale {
+            background-color: #e74c3c;
+            right: 12px;
+            left: auto;
+            animation: pulse 1.5s infinite;
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        .product-image {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #eaeded;
+        }
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .product-name {
+            font-size: 1.2em;
+            font-weight: bold;
+            margin: 0 0 10px 0;
+            color: #2c3e50;
+        }
+        .product-desc {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        .price-box {
+            margin-top: auto;
+        }
+        .original-price {
+            text-decoration: line-through;
+            color: #95a5a6;
+            font-size: 0.9em;
+            margin-right: 10px;
+        }
+        .current-price {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #27ae60;
+        }
+        .sale-price {
+            color: #e74c3c;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>宇航科技手機旗艦商城</h1>
+        <p>全台最齊全的 10 大品牌新機，中低高階限時特惠中！</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 品牌 1 -->
+        <section class="brand-section">
+            <h2 class="brand-title">微光星座 (NovaStar)</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <span class="badge badge-level">入門低階</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">NovaStar Lite A1</div>
+                            <div class="product-desc">大電量長續航，給長輩與輕度使用者的最佳高CP值首選。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="current-price">TWD 3,990</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="badge badge-level">標準中階</span>
+                    <span class="badge badge-sale">限時特價</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">NovaStar Plus X5</div>
+                            <div class="product-desc">微光系列中階神機，搭載高刷螢幕與一億畫素鏡頭。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="original-price">TWD 9,990</span>
+                            <span class="current-price sale-price">TWD 7,990</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="badge badge-level">頂級高階</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">NovaStar Ultra Z10</div>
+                            <div class="product-desc">最新旗艦晶片、鈦金屬邊框，支援衛星通訊的極致工藝。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="current-price">TWD 32,900</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌 2 -->
+        <section class="brand-section">
+            <h2 class="brand-title">御風者 (Zephyr)</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <span class="badge badge-level">入門低階</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">Zephyr Air 3</div>
+                            <div class="product-desc">超輕薄機身設計，基礎文書與社群軟體流暢運行。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="current-price">TWD 4,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="badge badge-level">標準中階</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">Zephyr Storm 7</div>
+                            <div class="product-desc">雙喇叭環繞音效，專為影音娛樂打造的中階神機。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="current-price">TWD 11,500</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="badge badge-level">頂級高階</span>
+                    <span class="badge badge-sale">限時特價</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">Zephyr Typhoon Pro</div>
+                            <div class="product-desc">極限電競散熱系統，滿幀運行3D手遊不發燙。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="original-price">TWD 28,000</span>
+                            <span class="current-price sale-price">TWD 24,900</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 品牌 3 -->
+        <section class="brand-section">
+            <h2 class="brand-title">量子動力 (Quantum)</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <span class="badge badge-level">入門低階</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">Quantum Atom e1</div>
+                            <div class="product-desc">極簡操作介面，支援防水防塵，實用與耐操兼具。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="current-price">TWD 3,200</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <span class="badge badge-level">標準中階</span>
+                    <img class="product-image" src="https://picsum.photos" alt="手機">
+                    <div class="product-info">
+                        <div>
+                            <div class="product-name">Quantum Electron m3</div>
+                            <div class="product-desc">超廣角三鏡頭，夜拍效果同級最優秀。</div>
+                        </div>
+                        <div class="price-box">
+                            <span class="current-price">TWD 8,900</span>
+                        </div>
+                    </div>
