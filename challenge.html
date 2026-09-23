@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carllenge | Next-Gen Cyberpunk Sports Gear</title>
+    <style>
+        /* CSS 設計：賽博龐克暗黑科技風格 (Cyberpunk Dark Tech Style) */
+        :root {
+            --bg-color: #050508;
+            --panel-bg: #0d0e15;
+            --neon-blue: #00f3ff;
+            --neon-magenta: #ff0055;
+            --text-color: #e2e8f0;
+            --muted-text: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            overflow-x: hidden;
+        }
+
+        /* 導覽列 */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            background: rgba(13, 14, 21, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 243, 255, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 900;
+            letter-spacing: 3px;
+            color: #fff;
+            text-shadow: 0 0 10px var(--neon-blue);
+        }
+
+        .logo span {
+            color: var(--neon-magenta);
+            text-shadow: 0 0 10px var(--neon-magenta);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-color);
+            text-decoration: none;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--neon-blue);
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+
+        /* 主視覺區 */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 100px 50px 50px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .hero-text h1 {
+            font-size: 64px;
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 span {
+            display: block;
+            background: linear-gradient(45deg, var(--neon-blue), var(--neon-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            color: var(--muted-text);
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        /* 原創設計：純 CSS 渲染未來科技球鞋 */
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .shoe-canvas {
+            width: 450px;
+            height: 300px;
+            position: relative;
+            background: transparent;
+            transform: rotate(-15deg);
+            filter: drop-shadow(0 0 30px rgba(0, 243, 255, 0.3));
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: rotate(-15deg) translateY(0px); }
+            50% { transform: rotate(-13deg) translateY(-20px); }
+        }
+
+        /* 鞋身主體 */
+        .shoe-body {
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            width: 350px;
+            height: 140px;
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            border-radius: 40% 70% 30% 40% / 50% 60% 30% 40%;
+            border-top: 3px solid var(--neon-blue);
+        }
+
+        /* 鞋底科技氣墊 */
+        .shoe-sole {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            width: 360px;
+            height: 35px;
+            background: linear-gradient(90deg, var(--neon-magenta), var(--neon-blue));
+            border-radius: 20px 20px 40px 30px;
+            box-shadow: 0 5px 15px rgba(0, 243, 255, 0.4);
+        }
+
+        /* 鞋領與後跟 */
+        .shoe-collar {
+            position: absolute;
+            top: 50px;
+            left: 120px;
+            width: 110px;
+            height: 90px;
+            background: #0f172a;
+            transform: rotate(-25deg);
+            border-radius: 30% 30% 0 0;
+            border-left: 2px solid var(--neon-magenta);
+        }
+
+        /* 側邊機械外骨骼裝飾線 */
+        .shoe-line {
+            position: absolute;
+            top: 40px;
+            right: 80px;
+            width: 140px;
+            height: 40px;
+            border-bottom: 4px dashed var(--neon-blue);
+            border-right: 4px solid var(--neon-blue);
+            transform: skewX(-30deg);
+            border-radius: 0 0 15px 0;
+        }
+
+        /* 產品展示區 */
+        .products {
+            padding: 100px 50px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 40px;
+            text-transform: uppercase;
+            border-left: 4px solid var(--neon-magenta);
+            padding-left: 15px;
+            text-shadow: 0 0 10px rgba(255, 0, 85, 0.3);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--panel-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 30px;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .product-card:hover {
+            border-color: var(--neon-blue);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 243, 255, 0.1);
+        }
+
+        /* 純 CSS 機能外套圖案 */
+        .jacket-icon {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 20px auto;
+            position: relative;
+            background: #1e293b;
+            border-radius: 15px;
+            border: 2px solid var(--neon-magenta);
+        }
+        .jacket-hood {
+            position: absolute;
+            top: 15px; left: 35px; width: 50px; height: 30px;
+            background: #0f172a; border-radius: 25px 25px 0 0;
+            border-top: 2px solid var(--neon-blue);
+        }
+        .jacket-zipper {
+            position: absolute;
+            top: 45px; left: 59px; width: 2px; height: 60px;
+            background: var(--neon-blue);
+            box-shadow: 0 0 8px var(--neon-blue);
+        }
+
+        .product-card h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .product-card p {
+            color: var(--muted-text);
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: var(--neon-blue);
+            font-weight: bold;
+        }
+
+        /* 數據監控後台面版 (Analytics System) */
+        .analytics-section {
+            padding: 50px;
+            max-width: 1400px;
+            margin: 50px auto;
+            background: var(--panel-bg);
+            border: 1px solid rgba(0, 243, 255, 0.2);
+            border-radius: 16px;
+        }
+
+        .analytics-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .btn-export {
+            background: linear-gradient(45deg, var(--neon-blue), #00a2ff);
+            color: #000;
+            border: none;
+            padding: 12px 24px;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.4);
+        }
+
+        .btn-export:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px var(--neon-blue);
+        }
+
+        .log-table-container {
+            max-height: 250px;
+            overflow-y: auto;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 14px;
+        }
+
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        th {
+            background-color: #050508;
+            color: var(--neon-blue);
+            position: sticky;
+            top: 0;
+        }
+
+        td {
+            color: #cbd5e1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <div class="logo">CARL<span>LENGE</span></div>
+        <ul class="nav-links">
+            <li><a href="#" class="trackable" data-label="Nav_Home">首頁</a></li>
+            <li><a href="#products" class="trackable" data-label="Nav_Products">未來裝備</a></li>
+            <li><a href="#analytics" class="trackable" data-label="Nav_Analytics">智能核心</a></li>
+        </ul>
+    </nav>
+
+    <!-- 英雄主視覺區 -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Next-Gen<br><span>Cyber-Armor</span></h1>
+            <p>NIKE 與 Adidas 活在過去，而 Carllenge 活在未來。我們將賽博龐克美學與生物數據感應完美融合。這不是普通的球鞋，這是你征服城市的外部裝甲。</p>
+        </div>
+        <div class="hero-visual">
+            <!-- 純 CSS 設計的未來科技感球鞋 -->
